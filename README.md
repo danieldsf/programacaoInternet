@@ -1,15 +1,19 @@
 #LINKS INTERESSANTES
 
-#COMPUTACAO
+##COMPUTACAO
 
-#MATEMATICA
+[GFredericks](http://www.gfredericks.com/)
 
-#FISICA
+[CandyCance](http://en.blog.candycane.jp)
 
-#ASTRONOMIA
+##MATEMATICA
 
-#INGLES
+##FISICA
 
-#BIOLOGIA
+##ASTRONOMIA
 
-#QUIMICA
+##INGLES
+
+##BIOLOGIA
+
+##QUIMICA
