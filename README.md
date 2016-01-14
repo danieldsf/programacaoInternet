@@ -4,7 +4,7 @@
 
 [GFredericks](http://www.gfredericks.com/)
 
-[CandyCance](http://en.blog.candycane.jp)
+[CandyCane](http://en.blog.candycane.jp)
 
 ##MATEMATICA
 
