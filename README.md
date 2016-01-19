@@ -1,6 +1,6 @@
-#LINKS INTERESSANTES
+##LINKS INTERESSANTES
 
-##COMPUTACAO
+###COMPUTACAO
 
 [GFredericks](http://www.gfredericks.com/)
 
@@ -14,24 +14,30 @@
 
 [DevFuria](http://www.devfuria.com.br/)
 
-##MATEMATICA
+[Desenvolvimento Código Aberto](http://desenvolvimentoaberto.org/)
+
+[WebDevBr](https://www.webdevbr.com.br/)
+
+[Vamos construir um compilador](http://compiladores.osdevbrasil.net/)
+
+###MATEMATICA
 
 
 
-##FISICA
+###FISICA
 
 
 
-##ASTRONOMIA
+###ASTRONOMIA
 
 
 
-##INGLES
+###INGLES
 
 
 
-##BIOLOGIA
+###BIOLOGIA
 
 
 
-##QUIMICA
+###QUIMICA
