@@ -1,6 +1,6 @@
-##LINKS INTERESSANTES
+###LINKS INTERESSANTES
 
-###COMPUTACAO
+**COMPUTACAO**
 
 [GFredericks](http://www.gfredericks.com/)
 
@@ -20,24 +20,14 @@
 
 [Vamos construir um compilador](http://compiladores.osdevbrasil.net/)
 
-###MATEMATICA
+**MATEMATICA**
 
+**FISICA**
 
+**ASTRONOMIA**
 
-###FISICA
+**INGLES**
 
+**BIOLOGIA**
 
-
-###ASTRONOMIA
-
-
-
-###INGLES
-
-
-
-###BIOLOGIA
-
-
-
-###QUIMICA
+**QUIMICA**
