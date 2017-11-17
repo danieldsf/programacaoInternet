@@ -1,0 +1,31 @@
+
+h1{
+    color: white;
+    background-color: purple ;
+    text-align: center;
+    
+}
+
+h1, h2{
+    font-family: "Arial" , sans-serif;
+}
+
+p{
+    text-align: justify;
+    font-family: "Times New Roman" , serif; 
+}
+body{
+    background-color: #f2fffc;
+
+}
+
+.retrato{
+    width: 300px;
+    height: 240px;
+}
+.citacao{
+    width: 200px;
+    border-color: dimgray;
+    border-width: 20px;
+    background-color: darkgray;
+}
