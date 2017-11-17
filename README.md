@@ -1,13 +1,12 @@
-
 # Perfil-Acadêmico
 
-	Daniel da Silva Farias
+Daniel da Silva Farias
 
 ### Contatos :
 
 * WhatsApp - +55(86)99521-0124
 * Telegram - @daniel_dsfarias
-* Email - leonfers@hotmail.com
+* Email - ddanielsilva661@gmail.com
 
 ### Habilidades :
 
@@ -23,7 +22,6 @@
 * Arduino - basico
 * NodeJS - intermediario
 
-
 ### Interesses Acadêmicos e profissionais :
 
 * Machine Learning
@@ -31,24 +29,12 @@
 * Image Processing
 * Mobile Development
 * Stocks trading
-
-### Portifolio :
-
-* https://github.com/leonfers/JacaEventos
-
->Projeto final da disciplina de programção coorporativa com o objetivo de permitir a criação e gerencia de eventos tal qual inscrições >nos mesmos.
-
-* https://github.com/leonfers/codepioab
-
->Projeto criado na hackathon da OAB , que se trata de um mensageiro voltado a advogados.
-
-* https://github.com/GabrielShaad/hackUMBC-journey
-
->Jogo em realidade virtual feito para rodar direto no navegador.
+* Software Engineering
+* Web Development
 
 ### Expectativa quanto a disciplina de Programacao Corporativa:
 
-  Oportunidades de aprender a criar serviços online que se sobressaem ante aos criados por geradores automàticos ou webdesigner inexperientes.
+	
 
 ### Possìveis temas não abordados:
 
@@ -58,35 +44,38 @@
 
 **COMPUTACAO**
 
-	[GFredericks](http://www.gfredericks.com/)
+[GFredericks](http://www.gfredericks.com/)
 
-	[CandyCane](http://en.blog.candycane.jp)
+[CandyCane](http://en.blog.candycane.jp)
 
-	[Blog do Angelino Goulart](http://angelitomg.com/blog/)
+[Blog do Angelino Goulart](http://angelitomg.com/blog/)
 
-	[Revista PROGRAMAR](http://www.revista-programar.info/)
+[Revista PROGRAMAR](http://www.revista-programar.info/)
 
-	[Simulador RISC-16](http://risc16simulator.appspot.com/)
+[Simulador RISC-16](http://risc16simulator.appspot.com/)
 
-	[DevFuria](http://www.devfuria.com.br/)
+[DevFuria](http://www.devfuria.com.br/)
 
-	[Desenvolvimento Código Aberto](http://desenvolvimentoaberto.org/)
+[Desenvolvimento Código Aberto](http://desenvolvimentoaberto.org/)
 
-	[WebDevBr](https://www.webdevbr.com.br/)
+[WebDevBr](https://www.webdevbr.com.br/)
 
-	[Vamos construir um compilador](http://compiladores.osdevbrasil.net/)
+[Vamos construir um compilador](http://compiladores.osdevbrasil.net/)
 
 **MATEMATICA**
 
-
+[Matematica SERCOMTEL](http://pessoal.sercomtel.com.br/matematica/index.html)
 
 **FISICA**
 
+[OBF](http://www.sbfisica.org.br/v1/olimpiada/2017/)
 
+[OBFEP](http://webcache.googleusercontent.com/search?q=cache:http://obfep.org.br/&gws_rd=cr&dcr=0&ei=_bgOWqHXGoGVwgTemrr4AQ)
 
 **ASTRONOMIA**
 
-
+[OBA](http://www.oba.org.br/site/)
 
 **INGLES**
 
+[English Experts](https://www.englishexperts.com.br/)
