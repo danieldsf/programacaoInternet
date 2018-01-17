@@ -7,6 +7,7 @@
 * WhatsApp - +55(86)99521-0124
 * Telegram - @daniel_dsfarias
 * Email - ddanielsilva661@gmail.com
+* Linkedin - www.linkedin.com/in/danieldasilvafarias
 
 ### Skillset :
 
@@ -25,6 +26,7 @@
 * Pascal
 * Joomla
 * Arduino
+* Android
 * OpenCV
 
 ### Academic and professional interests:
