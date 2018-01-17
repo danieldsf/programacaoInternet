@@ -11,13 +11,13 @@
 
 ### Skillset :
 
-* Advanced 
+#### Advanced 
 
 * Mysql/PostgreSQL
 * Java
 * PHP
 
-* Intermediate
+#### Intermediate
 
 * Python
 * NodeJS
@@ -53,6 +53,8 @@
 **COMPUTING**
 
 [GFredericks](http://www.gfredericks.com/)
+
+[Effective Django](http://www.effectivedjango.com/index.html)
 
 [CandyCane](http://en.blog.candycane.jp)
 
