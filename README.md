@@ -1,28 +1,33 @@
-# Perfil-Acadêmico
+# Academic profile
 
-Daniel da Silva Farias
+* Name: Daniel da Silva Farias
 
-### Contatos :
+### Contact me :
 
 * WhatsApp - +55(86)99521-0124
 * Telegram - @daniel_dsfarias
 * Email - ddanielsilva661@gmail.com
 
-### Habilidades :
+### Skillset :
 
-* Java - intermediario
-* Python -  intermediario
-* Java - intermediario
-* HTML/CSS/JAVASCRIPT - intermediario
-* PHP - Avancado
-* Mysql/PostgreSQL - intermediario
-* Oracle, SQL Server - intermediario
-* Joomla - basico
-* Pascal - basico
-* Arduino - basico
-* NodeJS - intermediario
+* Advanced 
 
-### Interesses Acadêmicos e profissionais :
+* Mysql/PostgreSQL
+* Java
+* PHP
+
+* Intermediate
+
+* Python
+* NodeJS
+* Html/Css/Javascript
+* Oracle, SQL Server
+* Pascal
+* Joomla
+* Arduino
+* OpenCV
+
+### Academic and professional interests:
 
 * Machine Learning
 * Deep Learning
@@ -32,50 +37,51 @@ Daniel da Silva Farias
 * Software Engineering
 * Web Development
 
-### Expectativa quanto a disciplina de Programacao Corporativa:
+### Expectations upon the current class:
 
-	
+* Understand how to build web server applications (backend) more efficiently.
 
-### Possìveis temas não abordados:
+### Themes that I believe that are not going to be deeply addressed:
 
-  Hacking e Machine Learnig
+* Hacking and Web Security
+* Machine Learnig
 
-### Links Interessantes:
+### Interesting Links:
 
-**COMPUTACAO**
+**COMPUTING**
 
 [GFredericks](http://www.gfredericks.com/)
 
 [CandyCane](http://en.blog.candycane.jp)
 
-[Blog do Angelino Goulart](http://angelitomg.com/blog/)
+[Angelino Goulart's Blog - PTBR](http://angelitomg.com/blog/)
 
-[Revista PROGRAMAR](http://www.revista-programar.info/)
+[PROGRAMAR Magazine](http://www.revista-programar.info/)
 
-[Simulador RISC-16](http://risc16simulator.appspot.com/)
+[RISC-16 Simulator](http://risc16simulator.appspot.com/)
 
 [DevFuria](http://www.devfuria.com.br/)
 
-[Desenvolvimento Código Aberto](http://desenvolvimentoaberto.org/)
+[Open Source Development](http://desenvolvimentoaberto.org/)
 
 [WebDevBr](https://www.webdevbr.com.br/)
 
-[Vamos construir um compilador](http://compiladores.osdevbrasil.net/)
+[Let us build a compiler](http://compiladores.osdevbrasil.net/)
 
-**MATEMATICA**
+**MATHEMATICS**
 
-[Matematica SERCOMTEL](http://pessoal.sercomtel.com.br/matematica/index.html)
+[Mathematics by SERCOMTEL](http://pessoal.sercomtel.com.br/matematica/index.html)
 
-**FISICA**
+**PHYSICS**
 
 [OBF](http://www.sbfisica.org.br/v1/olimpiada/2017/)
 
 [OBFEP](http://webcache.googleusercontent.com/search?q=cache:http://obfep.org.br/&gws_rd=cr&dcr=0&ei=_bgOWqHXGoGVwgTemrr4AQ)
 
-**ASTRONOMIA**
+**ASTRONOMY**
 
 [OBA](http://www.oba.org.br/site/)
 
-**INGLES**
+**ENGLISH**
 
 [English Experts](https://www.englishexperts.com.br/)
