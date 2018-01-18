@@ -9,24 +9,9 @@ class User(models.Model):
 
 class Profile(models.Model):
 	name = models.CharField(max_length = 100)
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-class Timeline(models.Model):
-	pass
-
-class Relationship(models.Model):
-	pass
-
-class Post(models.Model):
-	text = models.CharField(max_length = 255)
-	created_date = models.DateTimeField()
-	profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
-
-class Comment(models.Model):
-	text = models.CharField(max_length = 255)
-	created_date = models.DateTimeField()
-	profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
-	post = models.ForeignKey(Post, on_delete=models.CASCADE)
+	user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="profiles")
+	relationship = models.ManyToManyField("self")
 
 class Reaction(models.Model):
 	REACTION_TYPE_CHOICES  = (
@@ -38,8 +23,31 @@ class Reaction(models.Model):
 		('ANGRY', 'angry')
 	)
 	
-	reaction_type = models.CharField(max_length=2, choices=REACTION_TYPE_CHOICES, default=LIKE)
+	reaction_type = models.CharField(max_length=2, choices=REACTION_TYPE_CHOICES, default='LIKE')
+	profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name = "reactions")
+
+class Post(models.Model):
+	text = models.CharField(max_length = 255)
 	created_date = models.DateTimeField(auto_now_add=True)
-	post = models.ForeignKey(Post, on_delete=models.CASCADE)
-	profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
+
+	profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name = "posts")
+	reactions = models.ManyToManyField(Reaction, through='PostReaction')
+
+class Comment(models.Model):
+	text = models.CharField(max_length = 255)
+	created_date = models.DateTimeField(auto_now_add=True)
+
+	profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name = "comments")
+	post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name = "comments")
+
+class PostReaction(models.Model):
 	weight = models.IntegerField()
+	created_date = models.DateTimeField(auto_now_add=True)
+
+	post = models.ForeignKey(Post, on_delete=models.CASCADE)
+	reaction = models.ForeignKey(Reaction, on_delete=models.CASCADE) 
+
+def get_date(day, month, year):
+	from django.utils import timezone
+	import datetime, pytz
+	return datetime.datetime(year, month, day, tzinfo=pytz.UTC)

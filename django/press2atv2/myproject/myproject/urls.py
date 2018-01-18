@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from myapp import views
 
+defined_models = ['users', 'profiles', 'postreactions', 'posts', 'comments', 'reactions']
+
+#Hehe
 urlpatterns = [
-    path('admin/', admin.site.urls),
+	path('admin/', admin.site.urls), 
+	path('', views.index)
 ]
+
+urlpatterns += [path(item, getattr(views.Printer, item)) for item in defined_models]

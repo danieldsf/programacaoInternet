@@ -3,10 +3,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>My App</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />
 </head>
 <body>
-	
+	<div class="container is-fluid has-text-centered">
+		<div class="columns">
+		  <div class="column">
+		    <h2>{{ title }}</h2>
+		  </div>
+		</div>
+		<hr>
+		{% block content %}
+		{% endblock %}
+	</div>
 </body>
 </html>
