@@ -20,6 +20,7 @@ from pools import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
-    path('', views.index),
+    path('question', views.question, name='question'),
+    path('question/<int:id>', views.question_detail, name='question_detail'),
     path('', views.index),
 ]

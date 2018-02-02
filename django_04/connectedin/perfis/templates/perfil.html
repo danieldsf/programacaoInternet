@@ -1,14 +1,25 @@
-<!-- connectedin/perfis/templates/index.html -->
 {% extends "base.html" %}
+
 {% block body %}
 	<h1>Detalhes do Perfil</h1>
-	<ul>
-		<li><strong>Nome: {{perfil.nome}}</strong></li>
-		<li><em>e-mail: {{perfil.email}}</em></li>
-		<li>Empresa: {{perfil.nome_empresa}}</li>
-		<li>Fone: {{perfil.telefone}}</li>
-        <a href="{% url 'index'  %}">Voltar</a>
+	<div class="row">
+		<div class="col-lg-12">
+		<h2 style="margin-top:0">{{perfil.nome|capfirst}}</h2>
+		<address>
+		<strong>{{perfil.nome_empresa}}</strong><br/>
+		<abbr title="Telefone">Tel:</abbr> {{perfil.telefone}}<br/>
+		<a href="mailto:{{perfil.email}}">{{perfil.email}}</a>
+		</address>
 
-        <a href="{% url 'convidar' perfil.id%}">Convidar</a>
+        <a class="btn btn-warning" href="{% url 'index' %}">Voltar</a>
+        {% if perfil != perfil_logado %}
+	        {% if ja_eh_contato %}
+	        <div class="well well-sm">Vocês estão conectados!</div>
+	        {% elif ja_foi_convidado %}
+	        <div class="well well-sm">Solicitacao pendente!</div>
+	        {% else %}
+	        	<a class="btn btn-success" role="button" href="{% url 'convidar' perfil.id %}">Convidar</a>
+	        {% endif %}
+        {% endif %}
     </ul>
 {% endblock %}

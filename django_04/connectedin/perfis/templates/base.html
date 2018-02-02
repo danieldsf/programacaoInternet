@@ -9,20 +9,21 @@
     <link href="{% static 'styles/main.css' %}" rel="stylesheet"/>
 </head>
 <body>
-<div class="container">
-<div class="header">
-<ul class="nav nav-pills pull-right">
-<li class=""><a href="{% url 'index' %}">Nome</a></li>
-<li class=""><a href="/logout/">Logout</a></li>
-</ul>
-<h3 class="text-muted">ConnectedIn</h3>
-</div>
-<!-- código omitido -->
-<div class="row content">
-{% block body %}
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li class=""><a href="{% url 'index' %}">{{ perfil_logado.nome|capfirst }}</a></li>
+				<li class=""><a href="{% url 'logout' %}">Logout</a></li>
+			</ul>
 
-{% endblock %}
-</div>
-</div>
+			<h3 class="text-muted">ConnectedIn</h3>
+		</div>
+			<!-- código omitido -->
+		<div class="row content">
+		{% block body %}
+
+		{% endblock %}
+		</div>
+	</div>
 </body>
 </html>

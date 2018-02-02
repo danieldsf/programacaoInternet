@@ -20,9 +20,12 @@ from perfis import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index,name='index'),
+    path('logout', views.logout,name='logout'),
     path('perfil/<int:perfil_id>', views.exibir, name='exibir'),
     path('perfil/<int:perfil_id>/convidar',views.convidar, name='convidar'),
-    path('convite/<int:perfil_id>/aceitar',views.aceitar, name='aceitar')
+    path('perfil/<int:perfil_id>/desfazer',views.desfazer, name='desfazer'),
+    path('convite/<int:convite_id>/recusar',views.recusar, name='recusar'),
+    path('convite/<int:convite_id>/aceitar',views.aceitar, name='aceitar')
 ]
 
 
