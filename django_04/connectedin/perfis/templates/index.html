@@ -1,0 +1,49 @@
+<!-- connectedin/perfis/templates/index.html -->
+{% extends "base.html" %}
+{% block body %}
+<div class="col-lg-12">
+<div class="panel panel-default">
+<div class="panel-heading">
+<strong>Todos os Perfis</strong>
+</div>
+{% if perfis %}
+<ul>
+{% for perfil in perfis %}
+<li>
+<a href="{% url 'exibir' perfil.id%}">{{ perfil.nome }}</a>
+/ {{ perfil.email }}
+</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>Nenhum Perfil encontrado</p>
+{% endif %}
+</div>
+
+<div class="panel panel-default">
+		{% if perfil_logado.convites_recebidos.count %}
+		<div class="panel-heading">
+		<strong>
+			Você tem
+			<span class="badge">{{ perfil_logado.convites_recebidos.count }}</span>
+			convite{{ perfil_logado.convites_recebidos.count|pluralize }}
+			aguardando aprovação
+		</strong>
+		</div>
+		<ul class="list-group">
+		{% for convite in perfil_logado.convites_recebidos.all %}
+		<li class="list-group-item">
+		{{ convite.solicitante.nome }}
+		<a href="{% url 'aceitar' convite.id %}" class="btn btn-primary pullright">aceitar</a>
+		</li>
+		{% endfor %}
+		</ul>
+		{% else %}
+		<div class="panel-body">
+		<p>Nenhum convite recebido :(</p>
+		</div>
+		{% endif %}
+	</div>
+
+</div>
+{% endblock %}

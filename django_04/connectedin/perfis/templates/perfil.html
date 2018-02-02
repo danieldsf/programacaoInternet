@@ -1,0 +1,14 @@
+<!-- connectedin/perfis/templates/index.html -->
+{% extends "base.html" %}
+{% block body %}
+	<h1>Detalhes do Perfil</h1>
+	<ul>
+		<li><strong>Nome: {{perfil.nome}}</strong></li>
+		<li><em>e-mail: {{perfil.email}}</em></li>
+		<li>Empresa: {{perfil.nome_empresa}}</li>
+		<li>Fone: {{perfil.telefone}}</li>
+        <a href="{% url 'index'  %}">Voltar</a>
+
+        <a href="{% url 'convidar' perfil.id%}">Convidar</a>
+    </ul>
+{% endblock %}
