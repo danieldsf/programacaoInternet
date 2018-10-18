@@ -1,0 +1,38 @@
+{% load staticfiles %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste de Texto</title>
+</head>
+<body>
+	<div id="app">
+		<h1 @click="showThem">[[ message ]]</h1>
+	</div>
+	<!-- Scripts -->
+	<script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'vue/dist/vue.min.js' %}"></script>
+	<script type="text/javascript">
+		Vue.config.devtools = true
+		const tabulation = new Vue({
+		  delimiters: ['[[', ']]'],
+		    el: '#app',
+		    computed: {
+		    },
+		    watch: {
+		    },
+		    data: {
+		      message: "Beleza na represa",
+		    },
+		    created: function () {
+		    },
+		    methods: {
+		      showThem: function(){
+		        alert("Kk eae man");
+		      },
+		    },
+		});
+	</script>
+</body>
+</html>

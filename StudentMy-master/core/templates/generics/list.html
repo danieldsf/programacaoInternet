@@ -1,0 +1,44 @@
+{% block body %}
+  <div class="panel panel-default">
+    <div class="panel-heading text-center">
+      Lista de {{ caption }}
+    </div>
+    <div class="panel-body">
+      <table class="table table-bordered table-responsive">
+        <thead>
+          <tr>
+            {% for title in titles %}    
+            <th>{{ title }}</th>
+            {% endfor %}
+            <th>Acões</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% if object_list.count > 0 %}  
+        {% for item in object_list %}
+          <tr>
+            {% for column in columns %}    
+            <td>{{ item|get_item:column }}</td>
+            {% endfor %}
+            <td>
+                <!--<a href="/{{ entity }}/view/{{item.pk}}" class="btn btn-primary" title=""><span class="glyphicon glyphicon-check"></span>&nbsp;Ver</a>-->
+                <a href="/{{ entity }}/edit/{{item.pk}}" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span>&nbsp;Editar</a>
+                <a href="#" class="btn btn-danger" onclick="confirmDelete('{{ entity }}/delete/{{item.pk}}')"><span class="glyphicon glyphicon-trash"></span>&nbsp;Deletar</a>
+            </td>
+          </tr>
+        {% endfor %}
+
+        {% else %}
+        <tr>
+          <td colspan="{{ titles|length|add:'1' }}">Sem registros encontrados</td>
+        </tr>
+        {% endif %}
+        </tbody>
+      </table>
+      <hr>
+      <h2>{{ titles.count }}</h2>
+      <a class="btn btn-primary" href="/{{ entity }}/add" title="">Adicionar</a>
+    </div>
+  </div>
+{% endblock %}
+<!--TABLES-->

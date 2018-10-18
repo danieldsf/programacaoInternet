@@ -1,0 +1,121 @@
+<!-- 
+<form class="form-signin" role="form" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <h2 class="form-signin-heading">Login</h2>
+        <br>
+        <input id="id_username" name="username" class="form-control" placeholder="Nome" required autofocus>
+        <br>
+        <input type="password" id="id_password" name="password" class="form-control" placeholder="Senha" required>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Login">Log in</button>
+        {% if form.errors %}
+        <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        Por favor, verifique o Email e/ou Senha informados
+        </div>
+        {% endif %}
+        
+</form> -->
+
+#path('forgot-password/', RecoveryPassView.as_view(), name='recuperar'),
+    #url(r'^password_reset/$', auth_views.password_reset, name='password_reset'),
+    #url(r'^password_reset/done/$', auth_views.password_reset_done, name='password_reset_done'),
+    #url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+    #    auth_views.password_reset_confirm, name='password_reset_confirm'),
+    #url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_complete'),
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+        {% block title %}
+        <title>StudentMy</title>
+        {% endblock %}
+        <link rel="stylesheet" href="{% static 'jquery-confirm/dist/jquery-confirm.min.css' %}">
+        <link rel="stylesheet" href="{% static 'jquery-ui/base/jquery-ui.css' %}">
+        <link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'custom.css' %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.css' %}">
+        {# JQUERY FILE UPLOAD SCRIPTS #}
+        <!--<script src="{% static 'js/pt-br.js' %}"></script>-->
+        <script src="{% static 'moment/min/moment.min.js' %}"></script>
+        <script src="{% static 'lockr/lockr.min.js' %}"></script>
+        <script src="{% static 'axios/dist/axios.min.js' %}"></script>
+        <script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+        <script src="{% static 'jquery-confirm/dist/jquery-confirm.min.js' %}"></script>
+        <!--<script src="{% static 'jquery-ui/dist/jquery.min.js' %}"></script>-->
+        <script src="{% static 'gasparenganga-jquery-loading-overlay/dist/loadingoverlay.min.js' %}"></script>
+</head>
+<body>
+        <div class="main-wrapper" id="principal">
+        {% block header %}
+{#              <header class="container-fluid">#}
+{#                      <div class="row parent">#}
+{#                              <div class="col-sm-2">#}
+{#                                      <img class="pull-left img-responsive user-photo" src="{% static 'img/user.png' %}" alt="IFPI">#}
+{#                              </div>#}
+{##}
+{#                              <div class="col-sm-7 child text-left profile-text">#}
+{#                                      <p>Ola, {{ request.session.user.nome }}</p>#}
+{#                                      <p>#{{ request.session.user.codigo }}&nbsp;&nbsp;<a class="btn btn-primary btn-sm" href="{% url 'logout' %}" title="">Sair</a>#}
+{#                                              &nbsp;&nbsp;#}
+{#                                      </p>#}
+{#                              </div>#}
+{##}
+{#                              <div class="col-sm-3">#}
+{#                                      <img class="pull-right img-responsive " src="{% static 'img/topo_ifpi.png' %}" alt="IFPI">#}
+{#                              </div>  #}
+{#                      </div>#}
+{#              </header>#}
+        {% endblock %}
+
+        {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} alert-dismissable">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</strong>
+                </div>
+                {% endfor %}
+        {% endif %}
+
+        {% block content %}
+                
+        {% endblock %}
+                <div class="footer">
+                                <h5>&copy; Desenvolvido por GDSofts</h5>
+                </div>
+        </div>
+        {# PHOTOS PAGE SCRIPTS #}
+        <script src="{% static 'custom.js' %}"></script>
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
+
+<!-- <h3>Forgot password</h3>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form> -->
+
+<!-- 
+<div class="panel panel-default">
+        <div class="panel-heading text-center">
+            <h3>Change password</h3>
+        </div>
+        
+        <div class="panel-body">
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Change password</button>
+          </form>
+        </div>
+      </div> 
+-->

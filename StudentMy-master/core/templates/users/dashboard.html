@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h2>Welcome, {{ request.session.user.name }}</h2>
+
+{% if request.session.user.who_is == 'ST' %}
+	{% include 'users/dashboard_student.html' %}
+{% else %}
+	{% include 'users/dashboard_teacher.html' %}
+{% endif %}
+
+{% endblock %}

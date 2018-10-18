@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}
+    <title>Detalhe do Curso</title>
+{% endblock %}
+
+{% block body %}
+        <div class="container">
+            <div class="row">
+               <p>
+                   <img src="{{ course.thumb }}" width="200" height="200" >
+               </p>
+               <p>Data de Criacao: {{ course.created_date }}</p>
+               <p>Preco: {{ course.price }}</p>
+               <p>Professor: {{ course.teacher }}</p>
+            </div>
+            <!--<div class="row">
+                  <div class="col-md-4">
+                  <div class="panel panel-default">
+
+                        <h4>Detalhes da Aula</h4>
+                        {% for lecture in courses.lectures  %}
+                            <p>data de criação da aula{{lecture.created_date  }}</p>
+                            <p>Descricao da Aula {{ lecture.name }}</p>
+                        {% endfor %}
+
+                  </div>
+                </div>
+            </div>-->
+            <a href="{% url 'buy_course_confirmation' course.id %}" class="btn btn-success">
+              Buy course
+            </a>
+            <a href="{% url 'view_lectures' course.id %}" class="btn btn-success">
+              View lectures
+            </a>
+        </div>
+{% endblock %}

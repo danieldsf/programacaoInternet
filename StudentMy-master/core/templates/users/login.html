@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block body %}
+    {% include 'generics/form.html' with button_caption='Sign-in' caption='Login' %}
+    <br>
+    <a href="{% url 'register' %}"> Sign-up</a>
+    <br>
+    <a href="{% url 'password_reset' %}"> Forgot your password ? </a>
+{% endblock %}

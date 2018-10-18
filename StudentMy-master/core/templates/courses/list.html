@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}
+
+<title>Lista de Cursos</title>
+
+{% endblock %}	
+
+{% block body %}
+
+    <h2>Lista de Cursos</h2>
+
+    {% for course in courses %}
+
+    <p>{{ course }}</p>
+
+    {% endfor %}
+
+{% endblock %}	

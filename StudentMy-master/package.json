@@ -1,0 +1,41 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "A boilerplate for Django 2.0 Applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieldsf/django-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danieldsf/django-boilerplate/issues"
+  },
+  "homepage": "https://github.com/danieldsf/django-boilerplate#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "base64-img": "^1.0.4",
+    "blueimp-file-upload": "^9.21.0",
+    "bootstrap": "^3.3.7",
+    "chart.js": "^2.7.2",
+    "ckeditor": "^4.9.0",
+    "filestack-js": "^0.11.2",
+    "fontawesome": "^4.7.2",
+    "gasparesganga-jquery-loading-overlay": "^2.0.1",
+    "html2pdf.js": "^0.8.2",
+    "jquery": "^3.3.1",
+    "jquery-confirm": "^3.3.2",
+    "jquery-form": "^4.2.2",
+    "jquery-ui": "^1.12.1",
+    "knockout": "^3.5.0-beta",
+    "lockr": "^0.8.4",
+    "moment": "^2.21.0",
+    "select2": "^4.0.6-rc.1",
+    "vue": "^2.5.16",
+    "waypoints": "^4.0.1"
+  }
+}

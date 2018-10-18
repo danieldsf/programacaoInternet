@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}
+    <title>Lista de Cursos Favoritos</title>
+{% endblock %}
+
+{% block body %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Detalhes da compra</p>
+                    <p>Preco: {{ course.price }}</p>
+                    <p>Desconto: {{ course.discount_coupons.value }}</p>
+{#                    <p>Preço com Desconto: {{  }}</p>#}
+                    <p>Professor: {{ course.teacher }}</p>
+
+                </div>
+            </div>
+            <a href="{% url 'buy_course' course.id %}" class="btn btn-success">
+              Confirmar Compra do  Curso
+            </a>
+            <a href="{% url 'dashboard' %}" class="btn btn-danger">
+                Cancelar Compra
+            </a>
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}
+    <title>Subscriptions List</title>
+{% endblock %}  
+
+{% block body %}
+  <h2>Subscriptions List</h2>
+
+  <div class="container">
+      <div class="row">
+          {% if subscriptions.count > 0 %}
+              {% for sub in subscriptions %}
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+
+                    <a href="{% url 'aprove_subscription' sub.id %}">
+                         <div class="panel-body">
+                            <p>Course name: {{ sub.course.name }}</p>
+                            <p>Student name: {{ sub.student.name }}</p>
+                         </div>
+                         <div>
+                            Aprove
+                         </div>
+                     </a>
+                    </div>
+                </div>
+              {% endfor %}
+          {% else %}
+              <div class="col-md-12">
+                No subscriptions
+              </div>
+          {% endif %}
+       </div>
+       <div class="row">
+          <a href="{% url 'index' %}" class="btn btn-default btn-lg">
+              Voltar
+          </a>
+       </div>
+  </div>
+{% endblock %}

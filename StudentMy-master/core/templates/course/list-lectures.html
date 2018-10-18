@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block title %}
+    <title>Detalhe do Curso</title>
+{% endblock %}
+
+{% block body %}
+        <div class="container">
+            <div class="row">
+               <p>
+                   <img src="{{ thumb }}" width="200" height="200" >
+               </p>
+               <p>Curso: {{ name }}</p>
+            </div>
+            <div class="row">
+                  <div class="col-md-4">
+                  <div class="panel panel-default">
+                        <h4>Detalhes da Aula</h4>
+                        {% for lecture in lectures  %}
+                          <iframe src="{{ lecture.url }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                          <p>data de criação da aula{{lecture.created_date  }}</p>
+                          <p>Descricao da Aula {{ lecture.name }}</p>
+                        {% endfor %}
+                  </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
