@@ -1,0 +1,250 @@
+# dm-css
+
+Boas práticas de CSS
+
+Entenda como escrever código CSS de forma consciente.
+Prefixos de Nomenclatura
+
+Nós usamos o prefixo ls- para todas as classes do framework. Isso nos ajuda a evitar conflitos com o CSS do produto de terceiros ou com outros frameworks. Qualquer coisa relacionada ao Locaweb Style, coloque o prefixo ls- na frente do nome.
+Aninhamento (nesting) no SASS
+
+Evite aninhar seletores (fazer "nesting"). Só porque você pode fazer isso, não significa que você deve fazê-lo sempre. Considere aninhar se você tem um escopo de estilos para um pai e se há múltiplos elementos para serem aninhados.
+
+Tenha em mente de manter um limite de no máximo três aninhamentos. Isso facilita a leitura e entendimento do código futuramente. Ah, nós usamos SASS no formato original e não SCSS.
+
+/** Assim é melhor **/
+div p a
+  text-decoration: none
+
+/** É permitido, mas use só quando necessário **/
+div
+  background-color: gray
+
+  p
+    color: #FFF
+    background-color: red
+    margin-top: 0
+    padding-bottom: 0
+
+    a
+      text-decoration: none
+
+Cores
+
+Não use nome de cor por extenso e sempre que utilizar uma cor hexadecimal que tenha repetição de valores, use sempre o valor de atalho e sempre com letras minúsculas, assim:
+
+/** Recomendado **/
+p {color: #aaa;}
+
+/** Não Recomendado **/
+p {color: #aaaaaa;}
+a {color: #AAAAAA;}
+
+Aspas
+
+Utilizamos ASPAS DUPLAS no CSS.
+
+input[type="checkout"] { ... }
+div:after { content: " "; }
+
+Comentários
+
+Para uma seção:
+
+/*** HEADER
+**** Header principal do site
+***/
+
+Nunca use comentários na mesma linha da propriedade:
+
+p {color: #fff;} /** Nunca use comentários assim **/
+p {color: #fff; /** Nunca use comentários assim **/ }
+
+Assim é melhor:
+
+/** Assim é melhor **/
+p {
+  color: #fff;
+  background: red;
+  margin: 0;
+
+  /** Assim também é bom **/
+  padding: 0;
+}
+
+Ordem das declarações
+
+Não é obrigatório, mas se puder fazer é bom. Declarações relacionadas devem ser agrupadas segundo a seguinte ordem:
+
+    Posicionamento
+    Box model
+    Tipografia
+    Visual
+
+Posicionamento vem primeiro por que isto pode remover um elemento do fluxo normal do documento e substituir estilos relacionados. O box model vem depois pois ele dita as dimensões e lugar do componente.
+
+Tudo o mais que toma lugar dentro do componente ou não impacta as duas seções anteriores, vem por último.
+
+Para uma lista completa de propridades e suas ordens, por favor veja Recess,
+
+Declarações relacionadas devem ser agrupadas, colocando posicionamento e as propriedades de box-model perto do topo, seguido das propriedades de tipografia e depois propriedades visuais.
+
+background: -o-linear-gradient(dark-blue, lightblue); 
+background: -moz-linear-gradient(dark-blue, lightblue); 
+background: linear-gradient(dark-blue, lightblue); 
+
+<!--<link rel="stylesheet" href="css/reset.css">-->
+<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+
+<!--
+      
+      -->
+
+
+
+@media all and (max-width : 768px) {
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle + a,
+  .menu {
+    display: none;
+  }
+
+  /* Stylinf the toggle lable */
+  .toggle {
+    display: block;
+    background-color: #254441;
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:17px;
+    text-decoration:none;
+    border:none;
+  }
+
+  .toggle:hover {
+    background-color: #000000;
+  }
+
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked + ul {
+    display: block;
+  }
+
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+    }
+
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav a:hover,
+  nav ul ul ul a {
+    background-color: #000000;
+  }
+  
+  nav ul li ul li .toggle,
+  nav ul ul a,
+    nav ul ul ul a{
+    padding:14px 20px;  
+    color:#FFF;
+    font-size:17px; 
+  }
+  
+  
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    background-color: #212121; 
+  }
+
+  /* Hide Dropdowns by Default */
+  nav ul ul {
+    float: none;
+    position:static;
+    color: #ffffff;
+    /* has to be the same number as the "line-height" of "nav a" */
+  }
+    
+  /* Hide menus on hover */
+  nav ul ul li:hover > ul,
+  nav ul li:hover > ul {
+    display: none;
+  }
+    
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav ul ul li" */ 
+  }
+
+}
+
+/*
+@media all and (max-width : 330px) {
+
+  nav ul li {
+    display:block;
+    width: 94%;
+  }
+
+}
+
+.col-1{width: 10%;}
+.col-2{width: 20%;}
+.col-3{width: 30%;}
+.col-4{width: 40%;}
+.col-5{width: 50%;}
+.col-6{width: 60%;}
+.col-7{width: 70%;}
+.col-8{width: 80%;}
+.col-9{width: 90%;}
+.col-10{width: 100%;}
+*/
+
+/*
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+*/
