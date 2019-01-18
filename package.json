@@ -1,0 +1,23 @@
+{
+  "name": "pi-ifpi-2017",
+  "version": "1.0.0",
+  "description": "* Name: Daniel da Silva Farias",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieldsf/PI-IFPI-2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danieldsf/PI-IFPI-2017/issues"
+  },
+  "homepage": "https://github.com/danieldsf/PI-IFPI-2017#readme",
+  "dependencies": {
+    "blueimp-file-upload": "^9.28.0",
+    "bootstrap": "^4.2.1"
+  }
+}

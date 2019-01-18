@@ -6,6 +6,20 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+requests = "*"
+django = "*"
+dj-database-url = "*"
+django-cors-headers = "*"
+django-debug-toolbar = "*"
+django-widget-tweaks = "*"
+gunicorn = "*"
+pillow = "*"
+psycopg2 = "*"
+python-decouple = "*"
+python-firebase = "*"
+raven = "*"
+whitenoise = "*"
+unipath = "*"
 
 [requires]
 python_version = "3.6"
