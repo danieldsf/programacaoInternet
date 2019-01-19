@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+######
 def download(url):
 	response = ''
 	try:
@@ -16,7 +16,6 @@ def search(keyword, url, depth):
 	page_sem_tags = BeautifulSoup(page, 'html.parser')
 	texto = page_sem_tags.text
 	trecho_encontrado = texto.find(keyword)
-
 	#Output:
 	print("Origem: " + format_link(url))
 	print(show_text(texto, trecho_encontrado, keyword))
@@ -53,6 +52,7 @@ def show_text(texto, trecho_encontrado, keyword):
 	output = ""
 	keyword_size = len(keyword)
 	
+	#print(trecho_encontrado)
 	if(trecho_encontrado < 0):
 		output = "Palavra nao encontrada"
 	elif(trecho_encontrado < 10):
@@ -62,4 +62,4 @@ def show_text(texto, trecho_encontrado, keyword):
 	return output
 
 if __name__ == '__main__':
-	search('Algeria', 'example.webscraping.com', 2)
+	search('Brasil', '//www.google.com.br', 1)

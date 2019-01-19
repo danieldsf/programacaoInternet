@@ -20,6 +20,7 @@ python-firebase = "*"
 raven = "*"
 whitenoise = "*"
 unipath = "*"
+bs4 = "*"
 
 [requires]
 python_version = "3.6"
